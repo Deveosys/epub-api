@@ -1,6 +1,7 @@
 "use strict";
 
 const express = require("express");
+const cors = require("cors");
 
 // Constants
 const PORT = 8080;
@@ -21,6 +22,7 @@ const books = [
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.static("./statics"));
 
